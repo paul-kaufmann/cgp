@@ -1,0 +1,15 @@
+cgp.o: cgp.cpp cgp.h mutation.h optimizationlog.h \
+  optimization_algorithms.h statistical_methods.h
+cgp-functions.o: cgp-functions.cpp cgp.h mutation.h optimizationlog.h \
+  optimization_algorithms.h statistical_methods.h
+node-function.o: node-function.cpp cgp.h mutation.h optimizationlog.h \
+  optimization_algorithms.h statistical_methods.h
+mutation.o: mutation.cpp mutation.h cgp.h optimization_algorithms.h \
+  statistical_methods.h optimizationlog.h
+optimization_algorithms.o: optimization_algorithms.cpp \
+  optimization_algorithms.h cgp.h mutation.h optimizationlog.h \
+  statistical_methods.h
+statistical_methods.o: statistical_methods.cpp statistical_methods.h \
+  cgp.h mutation.h optimizationlog.h optimization_algorithms.h
+optimizationlog.o: optimizationlog.cpp mutation.h cgp.h \
+  optimization_algorithms.h statistical_methods.h optimizationlog.h
